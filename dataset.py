@@ -4,16 +4,13 @@ Created on Sat Aug 12 20:09:22 2023
 
 @author: apurv
 """
-import dgl
 import dgllife.utils as chemutils
-import torch
 from collections import defaultdict
 import rdkit.Chem as Chem
 import numpy as np
 import pickle
 from tqdm import tqdm
 from rdkit import DataStructs
-from rdkit.Chem.rdMolDescriptors import GetMorganFingerprint
 from rdkit.Chem.rdMolDescriptors import GetMorganFingerprintAsBitVect
 import random
 

@@ -5,7 +5,7 @@ Created on Sat Aug 12 20:09:22 2023
 @author: apurv
 """
 import pickle
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import Dataset
 from datetime import datetime
 import sys
 import numpy as np
@@ -13,8 +13,7 @@ import torch
 import dgl
 from dgllife.utils import EarlyStopping
 import random
-import random
-from dataset import single_molgraph_return
+from JESTR1.dataset import single_molgraph_return
 
 class Spectra_data(Dataset):
     def __init__(self, data_list):

@@ -6,25 +6,18 @@ Created on Thu Oct  5 11:34:25 2023
 """
 
 import pickle
-from rdkit.Chem import AllChem
-from rdkit import Chem
 import yaml
-from utils import DatasetBuilder, MultiView_data, collate_contr_views, Print, load_models, contrastive_loss
-from utils import fp_bce_loss, fp_cos_loss, fp_cos, print_hp, Spectra_data, collate_spectra_data
-from utils import MyEarlyStopping, save_all_models
-from dataset import load_contrastive_data, load_spectra_wneg_data, load_cand_test_data
+from JESTR1.utils import DatasetBuilder, Print, load_models
+from JESTR1.utils import print_hp, Spectra_data, collate_spectra_data
+from JESTR1.dataset import load_cand_test_data
 import sys
 import os
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 import torch
-import pickle
-from models import MolEnc, SpecEncMLP_BIN, INTER_MLP2
-import matplotlib.pyplot as plt
+from JESTR1.models import INTER_MLP2
 import time
-from train_contr import train_contr
-import torch.nn.functional as F
-from sklearn.metrics import auc, roc_auc_score, roc_curve, average_precision_score
+from JESTR1.train_contr import train_contr
 from collections import defaultdict
 import numpy as np
 
